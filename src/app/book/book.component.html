@@ -1,0 +1,11 @@
+<div>
+  <input [(ngModel)]="newBookTitle" placeholder="Book Title" />
+  <input [(ngModel)]="newBookAuthor" placeholder="Book Author" />
+  <button (click)="addBook()">Add Book</button>
+  <ul>
+    <li *ngFor="let book of books; index as i">
+      {{ book.title }} {{ book.author }}
+      <button (click)="deleteBook(i)">Delete Book</button>
+    </li>
+  </ul>
+</div>
